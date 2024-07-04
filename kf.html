@@ -23,22 +23,26 @@
                 var param = parts[1];  // 't' or 'w'
 
                 // Define the redirect logic based on the suffix and parameter
-                if (suffix === 'html') {
-                    switch(param) {
-                        case 't':
-                            window.location.href = 'https://t.me/Fieeai';
-                            break;
-                        case 'w':
-                            window.location.href = 'https://t.me/cloud959';
-                            break;
-                        default:
-                            window.location.href = 'https://t.me/Fieeai';
+                setTimeout(function() {
+                    if (suffix === 'html') {
+                        switch(param) {
+                            case 't':
+                                window.location.href = 'https://t.me/Fieeai';
+                                break;
+                            case 'w':
+                                window.location.href = 'https://t.me/cloud959';
+                                break;
+                            default:
+                                window.location.href = 'https://t.me/Fieeai';
+                        }
+                    } else {
+                        window.location.href = 'https://t.me/Fieeai';
                     }
-                } else {
-                    window.location.href = 'https://t.me/Fieeai';
-                }
+                }, 10000); // 10000 milliseconds = 10 seconds
             } else {
-                window.location.href = 'https://t.me/Fieeai';
+                setTimeout(function() {
+                    window.location.href = 'https://t.me/Fieeai';
+                }, 10000); // 10000 milliseconds = 10 seconds
             }
         }
 
