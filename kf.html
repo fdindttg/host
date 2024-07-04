@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Suffix Redirect</title>
+	<!-- Event snippet for 购买 conversion page --> <script> gtag('event', 'conversion', { 'send_to': 'AW-1025180449/rdTJCN3bor0ZEKGG7OgD', 'transaction_id': '' }); </script>
+    <script>
+        // This function extracts the suffix and query parameter from the URL and redirects based on them
+        function redirectBasedOnSuffix() {
+            // Get the current URL
+            var url = window.location.href;
+
+            // Extract the part after the last dot
+            var suffixWithParam = url.substring(url.lastIndexOf('.') + 1);
+
+            // Split the suffix and parameter (e.g., 'html?=t')
+            var parts = suffixWithParam.split('?=');
+
+            // Ensure we have a valid format
+            if (parts.length === 2) {
+                var suffix = parts[0]; // 'html'
+                var param = parts[1];  // 't' or 'w'
+
+                // Define the redirect logic based on the suffix and parameter
+                if (suffix === 'html') {
+                    switch(param) {
+                        case 't':
+                            window.location.href = 'https://t.me/Fieeai';
+                            break;
+                        case 'w':
+                            window.location.href = 'https://t.me/cloud959';
+                            break;
+                        default:
+                            window.location.href = 'https://t.me/Fieeai';
+                    }
+                } else {
+                    window.location.href = 'https://t.me/Fieeai';
+                }
+            } else {
+                window.location.href = 'https://t.me/Fieeai';
+            }
+        }
+
+        // Call the function on page load
+        window.onload = redirectBasedOnSuffix;
+    </script>
+</head>
+<body>
+    <h1>为您转接客服，请稍等</h1>
+    <p>You will be transferred to customer service, please wait.</p>
+</body>
+</html>
